@@ -5,7 +5,7 @@
 <?php 
     require("../config/conexion.php");
 
-    $query = "SELECT id FROM vuelos WHERE estado = 'pendiente";
+    $query = "SELECT id FROM vuelos WHERE estado = 'pendiente' ;";
     $result = $db -> prepare($query);
     $result -> execute();
     $propuestas = $result -> fetchAll();
