@@ -16,11 +16,18 @@
 <table>
     <tr>
         <th>Id</th>
+        <th>Código Vuelo</th>
+        <th>Aerodromo Salida</th>
+        <th>Aerodromo llegada</th>
+        <th>Código Aeronave</th>
+        <th>Fecha Propuesta</th>
+        <th>Código Compañia</th>
     </tr>
 
     <?php
     foreach($propuestas as $propuesta){
-        echo "<tr><td>$propuesta[0]</td><td>$propuesta[2]</td><td>$propuesta[4]</td><td>$propuesta[6]</td><td>$propuesta[10]</td><td>$propuesta[11]</td><td>$propuesta[12]</td></tr>";
+        echo "<tr><td>$propuesta[0]</td><td>$propuesta[2]</td><td>$propuesta[4]</td><td>
+        $propuesta[6]</td><td>$propuesta[10]</td><td>$propuesta[11]</td><td>$propuesta[12]</td></tr>";
     }
     ?>
 
