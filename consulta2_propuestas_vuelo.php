@@ -10,7 +10,7 @@
     $query = "SELECT vuelos.id FROM vuelos, aerodromos_salida, aerodromos_llegada 
     WHERE vuelos.propuesta_vuelo_id =  aerodromos_salida.propuesta_vuelo_id AND 
     aerodromos_llegada.propuesta_vuelo_id = vuelos.propuesta_vuelo_id AND vuelos.estado = 'aceptado'
-     AND aerodromos_llegada.id_aerodromo = $codigo_destino AND aerodromos_salida.id_aerodromo = $aerodromo; ";
+     AND aerodromos_llegada.id_aerodromo = INT($codigo_destino) AND aerodromos_salida.id_aerodromo = INT($aerodromo); ";
     $result = $db -> prepare($query);
     $result -> execute();
     $propuestas = $result -> fetchAll();
