@@ -7,8 +7,8 @@
     $fecha = $_POST["fecha"];
 
     $query = "SELECT licencias_aviadores.pasaporte  FROM licencias, licencias_aviadores WHERE 
-    licencias.certificado_id = licencias_aviadores.certificado_id AND licencias.fecha_habilitacion <= $fecha 
-    AND licencia.fecha_termino >= $fecha ;" ;
+    licencias.certificado_id = licencias_aviadores.certificado_id AND licencias.fecha_habilitacion <= date($fecha) 
+    AND licencia.fecha_termino >= date($fecha) ;" ;
     $result = $db -> prepare($query);
     $result -> execute();
     $pilotos = $result -> fetchAll();
